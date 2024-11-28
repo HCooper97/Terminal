@@ -22,7 +22,7 @@ function getCommandResponse(command) {
     let response;
     switch (command) {
         case "resume":
-            window.open('resume.pdf', '_blank');
+            window.open('Resume.pdf', '_blank');
             return;
         case "help":
         case "about":

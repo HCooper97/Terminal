@@ -22,7 +22,7 @@ function getCommandResponse(command) {
     let response;
     switch (command) {
         case "resume":
-            window.open('https://hcooper97.github.io/Terminal/Resume.pdf', '_blank');
+            window.open('https://hcooper97.github.io/Terminal/resume.pdf', '_blank');
             return;
         case "help":
         case "about":

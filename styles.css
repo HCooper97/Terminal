@@ -1,0 +1,89 @@
+body {
+    background-color: #1a1a1a; /* Darker background */
+    color: #ffcc66 ; 
+    font-family: 'Fira Code', monospace; /* Terminal-style font */
+    padding: 0;
+    margin: 0;
+}
+
+#terminal {
+    width: 1200px; /* Fixed width */
+    height: calc(1200px / 1.618); /* Golden ratio height */
+    margin: 0 auto; /* Center horizontally within the page */
+    margin-top: 2em; /* Add some space at the top */
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+    background: #302f2f; /* Terminal background color */
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #6ec6e4 ;
+}
+
+#ascii-art {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #302f2f; /* Match terminal background */
+    color: #77c4d3 ; /* Color for ASCII art */
+    padding: 10px;
+    z-index: 10; /* Ensure it remains above other elements */
+    box-sizing: border-box;
+}
+
+#output {
+    white-space: pre-wrap;
+    padding: 0px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+#input-line {
+    display: flex;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#prompt {
+    padding-left: 10px;
+    color: #ffa45b ; 
+    font-weight: bold;
+}
+/* Styling for the output text */
+.output-text {
+    color: #ffffff ; 
+    padding-left: 10px;
+}
+#input {
+    background: transparent;
+    color: #ffcc66;
+    border: none;
+    outline: none;
+    width: 100%;
+    
+}
+
+/* Hide scrollbar for input and output */
+#terminal::-webkit-scrollbar {
+    display: none;
+}
+
+#terminal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Cursor blink effect */
+#input::placeholder {
+    animation: blink 1s step-start infinite;
+    color: #ffcc66 ;
+}
+#ascii-art {
+    font-size: 9px; /* Smaller font size for ASCII art */
+    /* You can keep the rest of the styles as they are */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

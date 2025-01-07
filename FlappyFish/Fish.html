@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird</title>
+  <style>
+    /* Load Canterbury font */
+    @font-face {
+      font-family: 'Canterbury';
+      src: url('Canterbury.ttf') format('truetype');
+    }
+
+    /* Load Maskdown font */
+    @font-face {
+      font-family: 'Maskdown';
+      src: url('Maskdown.otf') format('opentype'); /* Use the .otf file */
+    }
+
+    /* Canvas styling */
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background: #374041; /* Background for the game */
+      position: relative;
+      z-index: 0; /* Canvas is underneath overlays */
+    }
+
+    /* Rain overlay container */
+    #rainOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Ensures the rain effect doesn't interfere with clicks */
+      background-image: url('rain.gif');
+      background-size: 25% 25%; /* Scale the GIF to 25% of canvas size */
+      background-repeat: repeat; /* Tile the GIF */
+      background-position: 0 0; /* Initial position */
+      z-index: 1; /* Place the rain GIF above the canvas */
+    }
+
+    /* Fog overlay container */
+    #fogOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 15%; /* Fog height is 33% of the canvas */
+      pointer-events: none; /* Ensure the fog effect doesn't interfere with clicks */
+      background-image: url('fog.gif');
+      background-size: auto 100%; /* Scale the height of the fog */
+      background-repeat: repeat-x; /* Tile horizontally */
+      background-position: 0 0; /* Initial position */
+      opacity: 0.2; /* Set transparency for the fog */
+      z-index: 2; /* Place the fog above the rain and canvas */
+    }
+
+    /* Reset margins and prevent scrolling */
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- Rain effect overlay -->
+  <div id="rainOverlay"></div>
+
+  <!-- Fog effect overlay -->
+  <!--<div id="fogOverlay"></div>-->
+
+  <!-- Game canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Main game script -->
+  <script src="main.js"></script>
+</body>
+</html>

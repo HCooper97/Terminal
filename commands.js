@@ -1,11 +1,10 @@
 // Command definitions and their responses
 const commands = {
-    "help": "Available commands:\nresume - Displays my resume\nabout - Information about the developer\nclear - Clears the terminal\nsocials - Displays social media links\nhelp - Lists all available commands with descriptions\nfish - Opens Flappy Fish",
+    "help": "Available commands:\nresume - Displays my resume\nabout - Information about the developer\nclear - Clears the terminal\nsocials - Displays social media links\nhelp - Lists all available commands with descriptions",
     "about": "I'm a developer with a passion for technology and creating impactful projects.\nI currently work in IT at the University of Otago, bringing my skills to support a large academic community.\nI enjoy tackling challenges and solving problems in creative ways,\nwhether through building tools for better system management or enhancing user experience through thoughtful design.\nIn my spare time, I like to work on personal projects that allow me to explore different aspects of software development.\nWith an interest in story-driven games, rock climbing, and being a funny little guy,\nI bring a unique and well-rounded perspective to my work and hobbies.\nYou can find me sharing my creations and connecting with like-minded individuals on platforms like GitHub and Instagram.",
     "clear": "clear",
     "socials": "Social Media:\nhttps://github.com/DeadDove13\nhttps://www.instagram.com/dead_dove13/\nhttps://www.linkedin.com/in/henry-cooper-b82317ab/",
-    "resume": "Opens Resume",
-    "fish": "Secret Fish Game"
+    "resume": "Opening resume..."
 };
 
 // Add initial message to the terminal
@@ -25,9 +24,6 @@ function getCommandResponse(command) {
         case "resume":
             window.open('resume.pdf', '_blank');
             return;
-            case "fish":
-                window.open('./FlappyFish/Fish.html', '_blank');
-                return;
         case "help":
         case "about":
         case "socials":
